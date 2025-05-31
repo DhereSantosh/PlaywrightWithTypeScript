@@ -19,8 +19,16 @@ export class LoginPage{
 
         //Methods
 
-        async goToURL(){
-            await this.page.goto(`${process.env.ORANGEHRM_URL}`)
+        async goToURL() {
+            //await this.page.goto(`${process.env.ORANGEHRM_URL}`)
+            if(process.env.Test_Execution_Env == 'qa'){
+                await this.page.goto(`${process.env.ORANGEHRM_URL}`);
+                console.log()
+                console.log(`Test are running in ${process.env.Test_Execution_Env} env.`);
+            } else if (process.env.Test_Execution_Env == 'dev'){
+                await this.page.goto(`${process.env.ORANGEHRM_URL}`);
+                console.log(`Test are running in ${process.env.Test_Execution_Env} env.`);
+            }
         }
         async enterUsername(keyword:string){
             await this.userName.clear();

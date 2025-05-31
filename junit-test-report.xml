@@ -1,0 +1,41 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="15.212228999999963">
+<testsuite name="Chapter-05\05_PageObjectModel_Test.spec.ts" timestamp="2025-05-31T07:17:46.786Z" hostname="Google Chrome" tests="1" failures="1" skipped="0" time="11.407" errors="0">
+<testcase name="Page Object Model Test in PLaywright" classname="Chapter-05\05_PageObjectModel_Test.spec.ts" time="11.407">
+<failure message="05_PageObjectModel_Test.spec.ts:5:5 Page Object Model Test in PLaywright" type="FAILURE">
+<![CDATA[  [Google Chrome] › Chapter-05\05_PageObjectModel_Test.spec.ts:5:5 › Page Object Model Test in PLaywright 
+
+    Error: Timed out 5000ms waiting for expect(locator).toBeVisible()
+
+    Locator: getByRole('heading', { name: 'Dashboard' })
+    Expected: visible
+    Received: <element(s) not found>
+    Call log:
+      - expect.toBeVisible with timeout 5000ms
+      - waiting for getByRole('heading', { name: 'Dashboard' })
+
+
+       at ..\src\Pages\HomePage.ts:17
+
+      15 |         //Methods
+      16 |         async checkDashboardText(){
+    > 17 |             await expect(this.page.getByRole('heading', { name: 'Dashboard' })).toBeVisible();
+         |                                                                                 ^
+      18 |         } 
+      19 |         async validatePageTitle(keyword:string){
+      20 |             await expect(this.page).toHaveTitle(keyword);
+        at HomePage.checkDashboardText (F:\PlaywrightWithTypeScript\PlaywrightWithTS-Proj\src\Pages\HomePage.ts:17:81)
+        at F:\PlaywrightWithTypeScript\PlaywrightWithTS-Proj\tests\Chapter-05\05_PageObjectModel_Test.spec.ts:17:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\Chapter-05-05_PageObjectMo-7b8a5-ct-Model-Test-in-PLaywright-Google-Chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\Chapter-05-05_PageObjectMo-7b8a5-ct-Model-Test-in-PLaywright-Google-Chrome\test-failed-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

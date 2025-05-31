@@ -1,0 +1,18 @@
+Repo name: 
+                Rest-API-Practice
+              
+Repo name: 
+                PlaywrightFramework-Java-PageObjectModel
+              
+Repo name: 
+                APITesting-RestAssuredFramework
+              
+Repo name: 
+                BDDCucumberSeleniumFramework
+              
+Repo name: 
+                RPA_Automation-UiPath
+              
+Repo name: 
+                AppScript_EmailUtility
+              

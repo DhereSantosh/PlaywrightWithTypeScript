@@ -61,21 +61,21 @@
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "updateSourceMethod": "3way",
+    "updateSourceMethod": "patch",
     "version": "1.52.0",
-    "workers": 1,
+    "workers": 4,
     "webServer": null
   },
   "suites": [
     {
-      "title": "Chapter-05\\08_RunTestDataBaseOnEnv.spec.ts",
-      "file": "Chapter-05/08_RunTestDataBaseOnEnv.spec.ts",
+      "title": "Chapter-01\\04_Codegen_Test.spec.ts",
+      "file": "Chapter-01/04_Codegen_Test.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Page Object Model Test in PLaywright",
-          "ok": false,
+          "title": "Search Existing Employee - PIM - CodegenTC",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -88,106 +88,41 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 13392,
-                  "error": {
-                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByRole('heading', { name: 'Dashboard' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Dashboard' })\u001b[22m\n",
-                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByRole('heading', { name: 'Dashboard' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Dashboard' })\u001b[22m\n\n    at HomePage.checkDashboardText (F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\src\\Pages\\HomePage.ts:17:81)\n    at F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\tests\\Chapter-05\\08_RunTestDataBaseOnEnv.spec.ts:13:20",
-                    "location": {
-                      "file": "F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\src\\Pages\\HomePage.ts",
-                      "column": 81,
-                      "line": 17
-                    },
-                    "snippet": "\u001b[90m   at \u001b[39m..\\src\\Pages\\HomePage.ts:17\n\n\u001b[0m \u001b[90m 15 |\u001b[39m         \u001b[90m//Methods\u001b[39m\n \u001b[90m 16 |\u001b[39m         \u001b[36masync\u001b[39m checkDashboardText(){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m             \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'heading'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Dashboard'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 18 |\u001b[39m         } \n \u001b[90m 19 |\u001b[39m         \u001b[36masync\u001b[39m validatePageTitle(keyword\u001b[33m:\u001b[39mstring){\n \u001b[90m 20 |\u001b[39m             \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage)\u001b[33m.\u001b[39mtoHaveTitle(keyword)\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\src\\Pages\\HomePage.ts",
-                        "column": 81,
-                        "line": 17
-                      },
-                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByRole('heading', { name: 'Dashboard' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Dashboard' })\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\src\\Pages\\HomePage.ts:17\n\n\u001b[0m \u001b[90m 15 |\u001b[39m         \u001b[90m//Methods\u001b[39m\n \u001b[90m 16 |\u001b[39m         \u001b[36masync\u001b[39m checkDashboardText(){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m             \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'heading'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Dashboard'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 18 |\u001b[39m         } \n \u001b[90m 19 |\u001b[39m         \u001b[36masync\u001b[39m validatePageTitle(keyword\u001b[33m:\u001b[39mstring){\n \u001b[90m 20 |\u001b[39m             \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage)\u001b[33m.\u001b[39mtoHaveTitle(keyword)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at HomePage.checkDashboardText (F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\src\\Pages\\HomePage.ts:17:81)\u001b[22m\n\u001b[2m    at F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\tests\\Chapter-05\\08_RunTestDataBaseOnEnv.spec.ts:13:20\u001b[22m"
-                    }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "Global before is running...\n"
-                    },
-                    {
-                      "text": "Test are running in dev env.\n"
-                    },
-                    {
-                      "text": "Global afterEach is running...\n"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 13625,
+                  "errors": [],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-05-31T11:28:06.804Z",
+                  "startTime": "2025-06-01T09:53:16.514Z",
                   "annotations": [],
                   "attachments": [
                     {
-                      "name": "_error-context",
-                      "contentType": "application/json",
-                      "body": "eyJwYWdlU25hcHNob3QiOiItIGltZyBcImNvbXBhbnktYnJhbmRpbmdcIlxuLSBoZWFkaW5nIFwiTG9naW5cIiBbbGV2ZWw9NV1cbi0gYWxlcnQ6XG4gIC0gdGV4dDog74yzXG4gIC0gcGFyYWdyYXBoOiBJbnZhbGlkIGNyZWRlbnRpYWxzXG4tIHBhcmFncmFwaDogXCJVc2VybmFtZSA6IEFkbWluXCJcbi0gcGFyYWdyYXBoOiBcIlBhc3N3b3JkIDogYWRtaW4xMjNcIlxuLSB0ZXh0OiDvk6EgVXNlcm5hbWVcbi0gdGV4dGJveCBcIlVzZXJuYW1lXCJcbi0gdGV4dDog75GPIFBhc3N3b3JkXG4tIHRleHRib3ggXCJQYXNzd29yZFwiXG4tIGJ1dHRvbiBcIkxvZ2luXCJcbi0gcGFyYWdyYXBoOiBGb3Jnb3QgeW91ciBwYXNzd29yZD9cbi0gbGluazpcbiAgLSAvdXJsOiBodHRwczovL3d3dy5saW5rZWRpbi5jb20vY29tcGFueS9vcmFuZ2Vocm0vbXljb21wYW55L1xuLSBsaW5rOlxuICAtIC91cmw6IGh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS9PcmFuZ2VIUk0vXG4tIGxpbms6XG4gIC0gL3VybDogaHR0cHM6Ly90d2l0dGVyLmNvbS9vcmFuZ2Vocm0/bGFuZz1lblxuLSBsaW5rOlxuICAtIC91cmw6IGh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL2MvT3JhbmdlSFJNSW5jXG4tIHBhcmFncmFwaDogT3JhbmdlSFJNIE9TIDUuN1xuLSBwYXJhZ3JhcGg6XG4gIC0gdGV4dDogwqkgMjAwNSAtIDIwMjVcbiAgLSBsaW5rIFwiT3JhbmdlSFJNLCBJbmNcIjpcbiAgICAtIC91cmw6IGh0dHA6Ly93d3cub3JhbmdlaHJtLmNvbVxuICAtIHRleHQ6IC4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbi0gaW1nIFwib3JhbmdlaHJtLWxvZ29cIiJ9"
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\test-results\\Chapter-01-04_Codegen_Test-63dca--Employee---PIM---CodegenTC-Google-Chrome\\trace.zip"
                     }
-                  ],
-                  "errorLocation": {
-                    "file": "F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\src\\Pages\\HomePage.ts",
-                    "column": 81,
-                    "line": 17
-                  }
+                  ]
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "b2e117a056e7b9e67802-cf17b7f66b674d254edc",
-          "file": "Chapter-05/08_RunTestDataBaseOnEnv.spec.ts",
+          "id": "1b6e22be7c3bd40e0417-3b5dc944f40aa5faa6d3",
+          "file": "Chapter-01/04_Codegen_Test.spec.ts",
           "line": 3,
           "column": 5
         }
       ]
     }
   ],
-  "errors": [
-    {
-      "message": "Error: Cannot find module '../../test-data/dev/qa/test-data.json'\nRequire stack:\n- F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\tests\\Chapter-05\\02_DataDrivenUsingJSON_Test.spec.ts\n- F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\node_modules\\playwright\\lib\\transform\\transform.js\n- F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\node_modules\\playwright\\lib\\common\\esmLoaderHost.js\n- F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\node_modules\\playwright\\lib\\common\\process.js",
-      "stack": "Error: Cannot find module '../../test-data/dev/qa/test-data.json'\nRequire stack:\n- F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\tests\\Chapter-05\\02_DataDrivenUsingJSON_Test.spec.ts\n- F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\node_modules\\playwright\\lib\\transform\\transform.js\n- F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\node_modules\\playwright\\lib\\common\\esmLoaderHost.js\n- F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\node_modules\\playwright\\lib\\common\\process.js\n    at Object.<anonymous> (F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\tests\\Chapter-05\\02_DataDrivenUsingJSON_Test.spec.ts:2:1)",
-      "location": {
-        "file": "F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\tests\\Chapter-05\\02_DataDrivenUsingJSON_Test.spec.ts",
-        "column": 1,
-        "line": 2
-      },
-      "snippet": "\u001b[90m   at \u001b[39mChapter-05\\02_DataDrivenUsingJSON_Test.spec.ts:2\n\n\u001b[0m \u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { test\u001b[33m,\u001b[39m expect } \u001b[36mfrom\u001b[39m \u001b[32m'@playwright/test'\u001b[39m\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 2 |\u001b[39m \u001b[36mimport\u001b[39m testData \u001b[36mfrom\u001b[39m \u001b[32m'../../test-data/dev/qa/test-data.json'\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 3 |\u001b[39m\n \u001b[90m 4 |\u001b[39m type \u001b[33mTestData\u001b[39m \u001b[33m=\u001b[39m {\n \u001b[90m 5 |\u001b[39m     \u001b[33mTestDataSet1\u001b[39m\u001b[33m:\u001b[39m{\u001b[0m"
-    },
-    {
-      "message": "Error: ENOENT: no such file or directory, open 'F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\test-data\\dev\\qa\\testData.csv'",
-      "stack": "Error: ENOENT: no such file or directory, open 'F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\test-data\\dev\\qa\\testData.csv'\n    at Object.<anonymous> (F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\tests\\Chapter-05\\03_DataDrivenUsingCSV_Test.spec.ts:12:8)",
-      "location": {
-        "file": "F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\tests\\Chapter-05\\03_DataDrivenUsingCSV_Test.spec.ts",
-        "column": 8,
-        "line": 12
-      },
-      "snippet": "\u001b[90m   at \u001b[39mChapter-05\\03_DataDrivenUsingCSV_Test.spec.ts:12\n\n\u001b[0m \u001b[90m 10 |\u001b[39m }\n \u001b[90m 11 |\u001b[39m \u001b[36mconst\u001b[39m records \u001b[33m=\u001b[39m parse(\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 12 |\u001b[39m     fs\u001b[33m.\u001b[39mreadFileSync(path\u001b[33m.\u001b[39mjoin(__dirname\u001b[33m,\u001b[39m\u001b[32m'../../test-data/dev/qa/testData.csv'\u001b[39m))\u001b[33m,\u001b[39m\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 13 |\u001b[39m     {\n \u001b[90m 14 |\u001b[39m         columns \u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 15 |\u001b[39m         skip_empty_lines \u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: ENOENT: no such file or directory, open 'F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\test-data\\dev\\qa\\testData.xlsx'",
-      "stack": "Error: ENOENT: no such file or directory, open 'F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\test-data\\dev\\qa\\testData.xlsx'\n    at readExcelFile (F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\src\\utils\\ExcelHelper.ts:15:21)\n    at Object.<anonymous> (F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\tests\\Chapter-05\\04_DataDrivenUsingExcel_Test.spec.ts:9:30)",
-      "location": {
-        "file": "F:\\PlaywrightWithTypeScript\\PlaywrightWithTS-Proj\\src\\utils\\ExcelHelper.ts",
-        "column": 21,
-        "line": 15
-      },
-      "snippet": "\u001b[90m   at \u001b[39m..\\src\\utils\\ExcelHelper.ts:15\n\n\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m     \u001b[90m// read the excel file as binary string\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m     \u001b[36mconst\u001b[39m file \u001b[33m=\u001b[39m fs\u001b[33m.\u001b[39mreadFileSync(filePath)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m     \u001b[90m// parse into workbook\u001b[39m\n \u001b[90m 18 |\u001b[39m     \u001b[36mconst\u001b[39m workbook \u001b[33m=\u001b[39m \u001b[33mExcel\u001b[39m\u001b[33m.\u001b[39mread(file)\u001b[33m;\u001b[39m\u001b[0m"
-    }
-  ],
+  "errors": [],
   "stats": {
-    "startTime": "2025-05-31T11:28:01.522Z",
-    "duration": 19577.58,
-    "expected": 0,
+    "startTime": "2025-06-01T09:53:14.477Z",
+    "duration": 17546.026,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }

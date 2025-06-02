@@ -5,3 +5,9 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+/json-test-report.json
+/junit-test-report.xml
+/allure-report
+/allure-results
+/.DS_Strore
+/test-data/.DS_Strore
